@@ -1,52 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Arad Zulti — Computational Biology</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arad Zulti - Personal Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            font-style: italic;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "▸";
+            margin-right: 10px;
+            color: #667eea;
+        }
+
+        .education-item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .education-item h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .education-item p {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .link-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .link-button::after {
+            content: " →";
+        }
+
+        .personal-info {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .personal-info p {
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
     <div class="container">
-      <img class="avatar" src="https://github.com/aradzu10.png" alt="Arad Zulti" />
-      <div>
-        <h1>Arad Zulti</h1>
-        <p class="tagline">Master's student in Computational Biology at the Weizmann Institute</p>
-      </div>
+        <header>
+            <h1>Arad Zulti</h1>
+            <p class="subtitle">Computational Biology Researcher</p>
+        </header>
+
+        <section class="personal-info">
+            <p>👋 Welcome! I'm a computational biology researcher passionate about applying mathematical and computational methods to biological problems.</p>
+        </section>
+
+        <section>
+            <h2>About Me</h2>
+            <p>Born in 1998, I'm currently pursuing my academic journey at the intersection of mathematics, computer science, and biology.</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>🎓 Master's Degree in Computational Biology</h3>
+                <p><strong>Weizmann Institute of Science</strong></p>
+                <p>Currently pursuing advanced studies in computational biology, working in the Segal Lab</p>
+            </div>
+            <div class="education-item">
+                <h3>🎓 Bachelor's Degree in Mathematics & Computer Science</h3>
+                <p><strong>Bar-Ilan University</strong></p>
+                <p>Completed undergraduate studies with a dual major in Mathematics and Computer Science</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Links</h2>
+            <div class="links">
+                <a href="https://weizmann.elsevierpure.com/en/persons/arad-zulti/" class="link-button" target="_blank" rel="noopener noreferrer">
+                    My Weizmann Profile
+                </a>
+                <a href="https://www.weizmann.ac.il/math/segal/" class="link-button" target="_blank" rel="noopener noreferrer">
+                    Segal Lab - Weizmann Institute
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Arad Zulti. All rights reserved.</p>
+        </footer>
     </div>
-  </header>
-
-  <main class="container">
-    <section class="about">
-      <h2>About me</h2>
-      <p>Hello — I'm Arad. I'm currently pursuing a master's degree in Computational Biology at the Weizmann Institute of Science. I enjoy applying mathematical and computational techniques to problems in biology.</p>
-      <ul class="facts">
-        <li><strong>Master's:</strong> Computational Biology — Weizmann Institute of Science</li>
-        <li><strong>First degree:</strong> Mathematics & Computer Science — Bar-Ilan University</li>
-        <li><strong>Born:</strong> 1998</li>
-      </ul>
-    </section>
-
-    <section class="links">
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://weizmann.elsevierpure.com/en/persons/arad-zulti/" target="_blank" rel="noopener">Weizmann profile</a></li>
-        <li><a href="https://www.weizmann.ac.il/math/segal/" target="_blank" rel="noopener">Segal Lab (Weizmann)</a></li>
-        <li><a href="https://github.com/aradzu10" target="_blank" rel="noopener">GitHub — @aradzu10</a></li>
-      </ul>
-    </section>
-
-    <section class="contact">
-      <h2>Contact</h2>
-      <p>If you'd like to get in touch, you can reach me via my Weizmann profile (linked above) or open an issue on this repository.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 1998 — Arad Zulti</p>
-    </div>
-  </footer>
 </body>
 </html>
