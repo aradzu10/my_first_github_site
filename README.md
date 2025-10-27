@@ -9,7 +9,6 @@ To publish with GitHub Pages:
 
 Content included:
 - index.html — main page
-- styles.css — styling
 
 Links on the site point to the Weizmann profile and the Segal lab as requested.
 
